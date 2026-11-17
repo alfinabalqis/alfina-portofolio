@@ -14,6 +14,9 @@
   --c-accent: 184 242 106;
   --c-bar: 27 36 48;
   --c-dot: 74 88 107;
+  --g1: 184 242 106;
+  --g2: 45 212 191;
+  --ga: 0.14;
 }
 
 :root.light {
@@ -28,6 +31,35 @@
   --c-accent: 63 98 18;
   --c-bar: 229 233 239;
   --c-dot: 160 170 184;
+  --g1: 184 242 106;
+  --g2: 125 211 252;
+  --ga: 0.45;
+}
+
+.bg-aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    rgb(var(--c-bg)) 0%,
+    rgb(var(--g1) / var(--ga)) 30%,
+    rgb(var(--c-bg)) 50%,
+    rgb(var(--g2) / var(--ga)) 75%,
+    rgb(var(--c-bg)) 100%
+  );
+  background-size: 300% 100%;
+  animation: gradientShift 18s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-aurora { animation: none; }
 }
 
 html {
