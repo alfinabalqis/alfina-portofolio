@@ -9,7 +9,7 @@ export default function About() {
     <Section id="about" eyebrow="01 / About" title={`Hi, I’m ${profile.shortName}.`}>
       <div className="grid gap-12 md:grid-cols-2">
         <Reveal>
-          <p className="text-lg leading-relaxed text-muted">{profile.about}</p>
+          <p className="text-lg leading-relaxed text-muted text-justify">{profile.about}</p>
         </Reveal>
         <div className="space-y-6">
           {skillGroups.map((group, i) => (
