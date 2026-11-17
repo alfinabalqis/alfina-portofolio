@@ -20,13 +20,25 @@ export const education: {
   },
 ];
 
-export const certificates: { title: string; issuer: string }[] = [
+export type DocItem = {
+  title: string;
+  subtitle: string;
+  preview?: string; // gambar di public/docs/, mis. "/docs/cert-angga.jpg"
+  href?: string; // tautan kredensial resmi (opsional)
+};
+
+export const certificates: DocItem[] = [
+  { title: "Full-Stack JavaScript Developer: Website Travel", subtitle: "BuildWithAngga" },
+  { title: "Web Development Path (Node.js)", subtitle: "Progate" },
+  { title: "Belajar Pemrograman Web Dasar", subtitle: "Dicoding" },
+];
+
+export const documents: DocItem[] = [
   {
-    title: "Full-Stack JavaScript Developer: Website Travel",
-    issuer: "BuildWithAngga",
+    title: "Ijazah, Telkom University",
+    subtitle: "Associate Diploma, Application Software Engineering",
   },
-  { title: "Web Development Path (Node.js)", issuer: "Progate" },
-  { title: "Belajar Pemrograman Web Dasar", issuer: "Dicoding" },
+  { title: "Transkrip Nilai, Telkom University", subtitle: "GPA 3.99" },
 ];
 
 export const thesis =

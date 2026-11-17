@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { projects } from "@/data/projects";
 import Chip from "./Chip";
 import Reveal from "./Reveal";
@@ -11,8 +10,10 @@ export default function Projects() {
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((project, i) => (
           <Reveal key={project.slug} delay={(i % 2) * 0.1}>
-            <Link
-              href={`/projects/${project.slug}`}
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex h-full flex-col gap-5 rounded-3xl border border-line bg-panel p-5 transition-colors hover:border-accent"
             >
               <ScreenshotFrame
@@ -44,7 +45,7 @@ export default function Projects() {
                   </span>
                 </p>
               </div>
-            </Link>
+            </a>
           </Reveal>
         ))}
       </div>
