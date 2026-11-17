@@ -6,10 +6,12 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import OtherWork from "@/components/OtherWork";
 import Projects from "@/components/Projects";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />

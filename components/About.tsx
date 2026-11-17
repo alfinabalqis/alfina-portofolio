@@ -8,12 +8,12 @@ export default function About() {
   return (
     <Section id="about" eyebrow="01 / About" title={`Hi, I’m ${profile.shortName}.`}>
       <div className="grid gap-12 md:grid-cols-2">
-        <Reveal>
+        <Reveal from="left">
           <p className="text-lg leading-relaxed text-muted text-justify">{profile.about}</p>
         </Reveal>
         <div className="space-y-6">
           {skillGroups.map((group, i) => (
-            <Reveal key={group.label} delay={i * 0.08}>
+            <Reveal key={group.label} delay={i * 0.08} from="right">
               <p className="font-mono text-sm font-semibold tracking-wide text-accent">
                 {group.label}
               </p>
