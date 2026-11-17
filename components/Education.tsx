@@ -37,7 +37,7 @@ export default function Education() {
         ))}
       </div>
 
-      <Reveal className="mt-16">
+      {/* <Reveal className="mt-16">
         <h3 className="font-display text-2xl font-semibold">Diploma & transcripts</h3>
         <p className="mt-2 text-sm text-muted">Previews only. Originals available on request.</p>
       </Reveal>
@@ -47,7 +47,7 @@ export default function Education() {
             <DocumentCard {...doc} />
           </Reveal>
         ))}
-      </div>
+      </div> */}
     </Section>
   );
 }

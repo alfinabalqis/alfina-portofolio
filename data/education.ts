@@ -28,17 +28,18 @@ export type DocItem = {
 };
 
 export const certificates: DocItem[] = [
-  { title: "Full-Stack JavaScript Developer: Website Travel", subtitle: "BuildWithAngga" },
-  { title: "Web Development Path (Node.js)", subtitle: "Progate" },
-  { title: "Belajar Pemrograman Web Dasar", subtitle: "Dicoding" },
+  { title: "Full-Stack JavaScript Developer: Website Travel", subtitle: "BuildWithAngga", preview: "/docs/fullstack.png" },
+  { title: "Memulai Pemrograman dengan Dart", subtitle: "Dicoding", preview: "/docs/dart.png" },
+  { title: "Belajar Dasar Pemrograman JavaScript", subtitle: "Dicoding", preview: "/docs/js.png" },
 ];
 
 export const documents: DocItem[] = [
   {
     title: "Ijazah, Telkom University",
     subtitle: "Associate Diploma, Application Software Engineering",
+    preview: "/docs/.png"
   },
-  { title: "Transkrip Nilai, Telkom University", subtitle: "GPA 3.99" },
+  { title: "Transkrip Nilai, Telkom University", subtitle: "GPA 3.99", preview: "/docs/.png" },
 ];
 
 export const thesis =
