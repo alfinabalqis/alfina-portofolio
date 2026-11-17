@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { profile } from "@/data/profile";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/#about", label: "About" },
@@ -23,19 +24,21 @@ export default function Navbar() {
         <ul className="hidden items-center gap-8 font-mono text-sm text-muted md:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="transition-colors hover:text-accent">
+              <Link
+                href={link.href}
+                className="transition-colors hover:text-accent"
+              >
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
-        <a
-          href={profile.cv}
-          download
-          className="rounded-full bg-accent px-4 py-2 font-mono text-sm font-semibold text-bg transition-opacity hover:opacity-90"
-        >
-          Download CV
-        </a>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a href={profile.cv} download className="...class lama...">
+            Download CV
+          </a>
+        </div>
       </nav>
     </header>
   );

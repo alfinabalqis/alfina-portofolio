@@ -15,10 +15,10 @@ export default function ScreenshotFrame({
     <div
       className={`flex flex-col overflow-hidden rounded-2xl border border-line bg-panel ${className}`}
     >
-      <div className="flex h-9 shrink-0 items-center gap-2 bg-[#1B2430] px-4">
-        <span className="h-2.5 w-2.5 rounded-full bg-[#4A586B]" />
-        <span className="h-2.5 w-2.5 rounded-full bg-[#4A586B]" />
-        <span className="h-2.5 w-2.5 rounded-full bg-[#4A586B]" />
+      <div className="flex h-9 shrink-0 items-center gap-2 bg-bar px-4">
+        <span className="h-2.5 w-2.5 rounded-full bg-dot" />
+        <span className="h-2.5 w-2.5 rounded-full bg-dot" />
+        <span className="h-2.5 w-2.5 rounded-full bg-dot" />
       </div>
       <div className="relative min-h-0 flex-1">
         {src ? (

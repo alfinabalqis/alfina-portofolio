@@ -20,6 +20,8 @@ const mono = JetBrains_Mono({
   weight: ["400", "600"],
 });
 
+const themeScript = `try{if(localStorage.getItem("theme")==="light"){document.documentElement.classList.add("light")}}catch(e){}`;
+
 export const metadata: Metadata = {
   title: `${profile.name} — ${profile.role}`,
   description: profile.summary,
@@ -36,8 +38,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );

@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+  --c-bg: 12 16 21;
+  --c-panel: 19 26 34;
+  --c-panel2: 24 34 46;
+  --c-line: 38 49 64;
+  --c-ink: 233 237 242;
+  --c-muted: 169 180 194;
+  --c-faint: 127 139 153;
+  --c-accent: 184 242 106;
+  --c-bar: 27 36 48;
+  --c-dot: 74 88 107;
+}
+
+:root.light {
+  color-scheme: light;
+  --c-bg: 246 248 250;
+  --c-panel: 255 255 255;
+  --c-panel2: 238 241 245;
+  --c-line: 217 223 231;
+  --c-ink: 18 24 33;
+  --c-muted: 79 91 107;
+  --c-faint: 95 107 122;
+  --c-accent: 63 98 18;
+  --c-bar: 229 233 239;
+  --c-dot: 160 170 184;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -12,8 +40,8 @@ body {
 }
 
 ::selection {
-  background: #b8f26a;
-  color: #0c1015;
+  background: rgb(var(--c-accent));
+  color: rgb(var(--c-bg));
 }
 
 @media (prefers-reduced-motion: reduce) {
